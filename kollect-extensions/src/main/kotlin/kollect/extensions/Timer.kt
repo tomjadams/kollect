@@ -128,7 +128,7 @@ interface IOTimer : Timer<ForIO> {
 private val scheduler: ScheduledExecutorService by lazy {
     Executors.newScheduledThreadPool(2) { r ->
         Thread(r).apply {
-            name = "arrow-effects-scheduler-$id"
+            name = "arrow-fx-scheduler-$id"
             isDaemon = true
         }
     }

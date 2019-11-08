@@ -1,3 +1,5 @@
+apply plugin: 'kotlin-kapt'
+
 test {
     testLogging {
         exceptionFormat 'full'
@@ -12,11 +14,12 @@ dependencies {
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
 
+    implementation "io.arrow-kt:arrow-core:$arrowVersion"
     implementation "io.arrow-kt:arrow-core-data:$arrowVersion"
-    implementation "io.arrow-kt:arrow-effects:$arrowVersion"
-    implementation "io.arrow-kt:arrow-effects-io-extensions:$arrowVersion"
+    implementation "io.arrow-kt:arrow-fx:$arrowVersion"
+    implementation "io.arrow-kt:arrow-syntax:$arrowVersion"
 
-    kapt "io.arrow-kt:arrow-annotations-processor:$arrowVersion"
+    kapt "io.arrow-kt:arrow-meta:$arrowVersion"
 
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinxCoroutinesVersion"
 
@@ -25,4 +28,3 @@ dependencies {
 
 apply from: rootProject.file('gradle/gradle-mvn-push.gradle')
 apply from: rootProject.file('gradle/generated-kotlin-sources.gradle')
-apply plugin: 'kotlin-kapt'
