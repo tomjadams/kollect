@@ -3,7 +3,7 @@ apply from: 'detekt.gradle'
 buildscript {
     ext {
         gradleVersionsPluginVersion = '0.17.0'
-        javaVersion = JavaVersion.VERSION_1_7
+        javaVersion = JavaVersion.VERSION_11
         kotlinVersion = '1.3.11'
         kotlinxCoroutinesVersion = '1.1.0'
         kotlinxCollectionsImmutableVersion = '0.1'
