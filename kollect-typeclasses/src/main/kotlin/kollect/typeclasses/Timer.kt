@@ -1,6 +1,6 @@
 package kollect.typeclasses
 
-import arrow.effects.typeclasses.Duration
+import arrow.fx.typeclasses.Duration
 
 /**
  * Timer is a scheduler of tasks.

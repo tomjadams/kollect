@@ -8,6 +8,7 @@ dependencies {
     implementation "io.arrow-kt:arrow-core:$arrowVersion"
     implementation "io.arrow-kt:arrow-core-data:$arrowVersion"
     implementation "io.arrow-kt:arrow-fx:$arrowVersion"
+    implementation "io.arrow-kt:arrow-mtl-data:$arrowVersion"
     implementation "io.arrow-kt:arrow-syntax:$arrowVersion"
 
     kapt "io.arrow-kt:arrow-meta:$arrowVersion"
@@ -20,6 +21,6 @@ apply from: rootProject.file('gradle/generated-kotlin-sources.gradle')
 
 compileKotlin {
     kotlinOptions {
-        freeCompilerArgs = ["-XXLanguage:+InlineClasses"]
+        freeCompilerArgs += ["-Xinline-classes"]
     }
 }

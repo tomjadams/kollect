@@ -4,9 +4,9 @@ import arrow.Kind
 import arrow.core.Tuple2
 import arrow.core.right
 import arrow.core.some
-import arrow.data.*
-import arrow.effects.ForIO
-import arrow.effects.IO
+import arrow.mtl.*
+import arrow.fx.ForIO
+import arrow.fx.IO
 import arrow.extension
 import arrow.typeclasses.Applicative
 import arrow.typeclasses.Functor

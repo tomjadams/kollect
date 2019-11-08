@@ -5,8 +5,8 @@ import arrow.core.None
 import arrow.core.Option
 import arrow.core.Some
 import arrow.core.Tuple2
-import arrow.data.NonEmptyList
-import arrow.effects.typeclasses.Concurrent
+import arrow.core.NonEmptyList
+import arrow.fx.typeclasses.Concurrent
 
 sealed class BatchExecution
 object Sequentially : BatchExecution()

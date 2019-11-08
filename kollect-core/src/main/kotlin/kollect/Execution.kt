@@ -2,9 +2,9 @@ package kollect
 
 import arrow.Kind
 import arrow.core.Tuple2
-import arrow.data.NonEmptyList
-import arrow.data.extensions.nonemptylist.foldable.traverse_
-import arrow.effects.typeclasses.Concurrent
+import arrow.core.NonEmptyList
+import arrow.core.extensions.nonemptylist.foldable.traverse_
+import arrow.fx.typeclasses.Concurrent
 import kotlinx.coroutines.Dispatchers
 
 internal object KollectExecution {

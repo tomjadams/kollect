@@ -4,8 +4,8 @@ import arrow.Kind
 import arrow.core.Option
 import arrow.core.Tuple2
 import arrow.core.toOption
-import arrow.data.extensions.listk.foldable.foldM
-import arrow.data.k
+import arrow.core.extensions.listk.foldable.foldM
+import arrow.core.k
 import arrow.typeclasses.Monad
 
 inline class DataSourceResult(val result: Any)

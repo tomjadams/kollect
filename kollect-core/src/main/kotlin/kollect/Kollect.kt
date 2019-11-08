@@ -4,10 +4,10 @@ package kollect
 
 import arrow.Kind
 import arrow.core.*
-import arrow.data.NonEmptyList
-import arrow.effects.Promise
-import arrow.effects.Ref
-import arrow.effects.typeclasses.Concurrent
+import arrow.core.NonEmptyList
+import arrow.fx.Promise
+import arrow.fx.Ref
+import arrow.fx.typeclasses.Concurrent
 import arrow.higherkind
 import arrow.typeclasses.Applicative
 import arrow.typeclasses.Monad

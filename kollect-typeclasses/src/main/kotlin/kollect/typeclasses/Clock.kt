@@ -1,7 +1,7 @@
 package kollect.typeclasses
 
 import arrow.Kind
-import arrow.effects.typeclasses.MonadDefer
+import arrow.fx.typeclasses.MonadDefer
 import java.util.concurrent.TimeUnit
 
 /**
@@ -108,10 +108,10 @@ interface Clock<F> {
          */
         fun <F> create(SF: MonadDefer<F>): Clock<F> = object : Clock<F> {
             override fun realTime(unit: TimeUnit): Kind<F, Long> =
-                    SF { unit.convert(System.currentTimeMillis(), TimeUnit.MILLISECONDS) }
+                    SF.just(unit.convert(System.currentTimeMillis(), TimeUnit.MILLISECONDS))
 
             override fun monotonic(unit: TimeUnit): Kind<F, Long> =
-                    SF { unit.convert(System.nanoTime(), TimeUnit.NANOSECONDS) }
+                    SF.just(unit.convert(System.nanoTime(), TimeUnit.NANOSECONDS))
         }
 
         /**
